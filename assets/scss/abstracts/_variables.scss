@@ -1,0 +1,38 @@
+// Fonts
+$primary-font: "Arial", sans-serif;
+
+// Font Size
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-md: 16px;
+$font-size-lg: 18px;
+$font-size-xl: 20px;
+$font-size-xxl: 24px;
+
+// Font weight
+$font-weight-thin: 100;
+$font-weight-light: 300;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
+$font-weight-black: 900;
+
+// Colors
+$charcoal: #343a40;
+$charcoal-one: #f8f9fa;
+$charcoal-two: #b9bdc2;
+$charcoal-meduim: #616161;
+$primary: $charcoal;
+$secondary: $gray-400;
+$secondary-dark: $gray-600;
+$secondary-light: $gray-300;
+$inactive-color: $secondary-light;
+$light: #fff;
+$error-color: #eb322b;
+$icon-color: $charcoal;
+
+// Modal Sizes
+$modal-width-small: 300px;
+$modal-width-medium: 500px;
+$modal-width-large: 800px;

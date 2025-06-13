@@ -1,16 +1,49 @@
 {
-  "name": "layout",
+  "name": "data_vault",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prod:start": "next build && next start",
+    "prepare": "husky",
+    "format": "prettier --write \"**/*.{js,jsx,md,css,scss}\"",
+    "check": "prettier --check \"**/*.{js,jsx,md,css,scss}\""
   },
   "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.3.3"
+    "@reduxjs/toolkit": "^2.5.1",
+    "antd": "^5.24.1",
+    "axios": "^1.7.9",
+    "bootstrap": "^5.3.3",
+    "crypto-js": "^4.2.0",
+    "dayjs": "^1.11.13",
+    "eslint-config-prettier": "^10.0.1",
+    "formik": "^2.4.6",
+    "js-cookie": "^3.0.5",
+    "lint-staged": "^15.4.1",
+    "next": "14.2.23",
+    "react": "^18",
+    "react-bootstrap": "^2.10.8",
+    "react-datepicker": "^7.6.0",
+    "react-dom": "^18",
+    "react-dropzone": "^14.3.5",
+    "react-hot-toast": "^2.5.1",
+    "react-icons": "^5.4.0",
+    "react-loading-skeleton": "^3.5.0",
+    "react-paginate": "^8.3.0",
+    "react-redux": "^9.2.0",
+    "react-select": "^5.10.0",
+    "react-tooltip": "^5.28.0",
+    "redux": "^5.0.1",
+    "yup": "^1.6.1"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.2.23",
+    "husky": "^9.1.7",
+    "prettier": "^3.4.2",
+    "sass": "^1.83.4"
   }
 }

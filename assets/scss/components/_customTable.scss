@@ -1,0 +1,155 @@
+.table-div {
+  position: relative;
+  overflow: auto;
+  width: 100%;
+  padding: 0;
+  min-width: 100%;
+}
+
+.custom-table-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: $light;
+  font-weight: $font-weight-bold;
+}
+
+.table-header-row {
+  display: flex;
+  width: 100%;
+}
+
+.custom-table-cell {
+  flex: 1;
+  padding: 12px 15px;
+  text-align: center;
+  border: 1px solid $secondary;
+  font-size: 13px;
+  font-family: $primary-font;
+  background-color: $light;
+}
+
+.custom-table-header .custom-table-cell {
+  background-color: #eeeaea;
+  color: $dark;
+  font-size: 14px;
+  border: 1px solid $secondary;
+}
+
+.custom-table-body {
+  max-height: calc(100vh - 320px);
+}
+.custom-table-body.no-data {
+  position: sticky;
+  left: 0;
+}
+.custom-table-row {
+  display: flex;
+  width: 100%;
+}
+
+.custom-table-row:hover .custom-table-cell {
+  background-color: $light !important;
+}
+
+.custom-no-data {
+  text-align: center;
+  font-family: $primary-font;
+  color: #888;
+  padding: 20px;
+  font-size: 16px;
+}
+
+.table-header {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.actionBtn {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.clear-btn {
+  position: absolute;
+  top: 9px;
+  right: 7px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: $red-400;
+
+  &:hover {
+    background-color: $red-300;
+    color: $light;
+    font-weight: $font-weight-bold;
+    border-radius: 10px;
+  }
+}
+
+.input-with-clear {
+  padding-right: 30px;
+}
+.custom-table-row.no-data-row {
+  display: flex;
+  width: 100%;
+  min-width: 100%;
+}
+
+.custom-table-cell.no-data-cell {
+  flex: 1;
+  width: 100%;
+  min-width: 100%;
+  text-align: center;
+  padding: 20px;
+  font-family: $primary-font;
+  color: #888;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  height: 100%;
+}
+.floating-filter {
+  background-color: #efefef !important;
+}
+
+.table-watermark {
+  position: relative;
+  overflow: hidden;
+  .code {
+    position: absolute;
+    z-index: 2;
+    font-size: clamp(0.875rem, -1.7813rem + 8.5vw, 3rem);
+    font-weight: bolder;
+    color: gray;
+    opacity: 0.15;
+    user-select: none;
+    pointer-events: none;
+    &.top-left {
+      top: 25%;
+      left: 15%;
+    }
+    &.top-right {
+      top: 25%;
+      right: 15%;
+    }
+    &.bottom-left {
+      bottom: 5%;
+      left: 15%;
+    }
+    &.bottom-right {
+      bottom: 5%;
+      right: 15%;
+    }
+    &.middle {
+      top: 50%;
+      left: 40%;
+    }
+  }
+}

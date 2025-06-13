@@ -1,0 +1,57 @@
+.filter-div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  .filter-search {
+    width: 180px;
+    padding-top: "5px";
+    padding-bottom: "5px";
+    box-shadow: none;
+  }
+
+  .filter-search:hover {
+    border: 1px solid gray;
+    box-shadow: none;
+  }
+
+  .filter-search:focus {
+    box-shadow: none !important;
+    outline: none;
+    border: 1px solid rgb(12, 187, 231);
+  }
+
+  .filter-select {
+    max-width: 160px;
+    min-width: 160px;
+  }
+}
+
+.custom-filter-select {
+  max-width: 180px;
+  min-width: 180px;
+}
+
+.page-title {
+  margin-block: 10px;
+  margin-inline-end: 3px;
+}
+
+@media screen and (max-width: 768px) {
+  .filter-div {
+    width: 100%;
+  }
+
+  .custom-table {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 885px) {
+  .filter-div {
+    width: 100%;
+  }
+
+  .custom-table {
+    width: 100%;
+  }
+}

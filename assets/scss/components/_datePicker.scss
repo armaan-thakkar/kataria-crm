@@ -1,0 +1,187 @@
+.react-datepicker__year-wrapper {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1fr 1fr !important;
+  max-width: 100% !important;
+}
+
+.react-datepicker__year-text--selected,
+.react-datepicker__year-text--keyboard-selected {
+  background-color: grey !important;
+  color: $dark !important;
+}
+
+.react-datepicker__year .react-datepicker__year-text {
+  padding: 10px !important;
+}
+
+.react-datepicker__header {
+  background-color: $light !important;
+  padding: 14px 7px !important;
+  border-top-left-radius: 3px !important;
+  border-bottom-color: grey !important;
+}
+
+.react-datepicker__navigation {
+  top: 8px !important;
+}
+
+.react-datepicker__triangle {
+  display: none !important;
+}
+
+.react-datepicker__view-calendar-icon {
+  .react-datepicker__calendar-icon {
+    position: absolute;
+    bottom: 16px !important;
+    left: 16px !important;
+    color: grey;
+    padding: 0 !important;
+  }
+}
+.calendar-icon {
+  color: grey !important;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 9;
+}
+
+.react-datepicker__input-container {
+  input {
+    border: 1px solid grey !important;
+    padding: 11px 26px 7px 33px !important;
+    border-radius: 5px;
+  }
+}
+.react-datepicker {
+  box-shadow: -1px 3px 20px 7px rgba(0, 0, 0, 0.1) !important;
+  background-color: $light !important;
+  padding: 0px !important;
+  border: 1px solid grey !important;
+  border-radius: 5px !important;
+}
+
+.datepicker-right {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 5px;
+}
+
+.close-button {
+  position: absolute;
+  right: 11px;
+  top: 9px;
+  z-index: 1;
+  color: grey !important;
+  font-size: $font-size-md;
+  &:hover {
+    color: $red-400;
+  }
+}
+
+.react-datepicker-popper {
+  z-index: 10000 !important; /* Set a high z-index */
+  transform: translate(-4.5px, 42px) !important;
+}
+
+.custom-range {
+  // width: 235px;
+  max-width: 100%;
+  border: 1px solid grey;
+  color: grey;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 9px 5px 7px;
+  background-color: $light;
+  position: relative;
+  font-size: 14px;
+  align-items: center;
+  &:focus {
+    border: 1px solid $primary;
+  }
+}
+
+.react-datepicker__close-icon::after {
+  background-color: transparent !important;
+  font-size: 25px !important;
+  font-weight: 200 !important;
+  position: absolute;
+  right: 14px;
+  top: 3px;
+  color: black !important;
+}
+
+// antd
+// Override Ant Design DatePicker styles using stable class names
+.ant-picker-outlined {
+  padding: 4px 9px 5px 7px !important;
+  border: 1px solid $gray-400 !important;
+  border-radius: 5px !important;
+  &:hover,
+  &:focus,
+  &:focus-within {
+    border-color: $gray-400 !important;
+    box-shadow: none !important;
+  }
+}
+
+// Dropdown Range Picker Styles
+.ant-picker-dropdown {
+  .ant-picker-range-arrow {
+    visibility: hidden;
+  }
+}
+
+// Set width constraints for vertical space components
+.ant-space-vertical {
+  max-width: 240px;
+  min-width: 226px;
+}
+
+// Placeholder text styling
+.ant-picker-input {
+  font-family: "Poppins", sans-serif !important;
+  input::placeholder {
+    color: $gray-600 !important;
+  }
+}
+
+// Selected Date Background Color
+.ant-picker-dropdown {
+  .ant-picker-cell-in-view.ant-picker-cell-selected:not(
+      .ant-picker-cell-disabled
+    )
+    .ant-picker-cell-inner,
+  .ant-picker-cell-in-view.ant-picker-cell-range-start:not(
+      .ant-picker-cell-disabled
+    )
+    .ant-picker-cell-inner,
+  .ant-picker-cell-in-view.ant-picker-cell-range-end:not(
+      .ant-picker-cell-disabled
+    )
+    .ant-picker-cell-inner {
+    background-color: $primary !important;
+  }
+}
+
+// Inner range background color
+.ant-picker-cell-in-view.ant-picker-cell-in-range::before,
+.ant-picker-cell-in-view.ant-picker-cell-range-start:not(
+    .ant-picker-cell-range-start-single
+  )::before,
+.ant-picker-cell-in-view.ant-picker-cell-range-end:not(
+    .ant-picker-cell-range-end-single
+  )::before,
+.ant-picker-time-panel-column
+  > li.ant-picker-time-panel-cell-selected
+  .ant-picker-time-panel-cell-inner {
+  background: rgb(229, 252, 252) !important;
+}
+
+// Highlight today's date
+.ant-picker-dropdown
+  .ant-picker-cell-in-view.ant-picker-cell-today
+  .ant-picker-cell-inner::before {
+  border-color: $primary !important;
+}

@@ -1,0 +1,18 @@
+.sort-icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .up-icon,
+  .down-icon {
+    transition: color 0.3s ease;
+    &.active {
+      color: $dark;
+    }
+
+    &.inactive {
+      color: gray;
+    }
+  }
+}

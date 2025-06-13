@@ -1,0 +1,32 @@
+.error-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 80vh;
+  font-family: $primary-font;
+}
+
+.error-page-header {
+  font-size: 3rem;
+  color: $error-color;
+}
+
+.error-page-message {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.error-page-link {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: $primary;
+}
+
+.error-page-link:hover {
+  text-decoration: underline;
+}

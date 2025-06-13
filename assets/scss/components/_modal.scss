@@ -1,0 +1,401 @@
+.upload-container {
+  height: 266px;
+}
+
+.file-wrapper {
+  width: 100%;
+  height: 200px;
+  max-width: 750px;
+  margin: 0 auto;
+  border: 2px dashed $primary;
+  border-radius: 8px;
+  background-color: #fafafa;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.file-wrapper:hover {
+  background-color: #e9ecef;
+  border-color: $secondary;
+}
+
+.file-wrapper .react-dropzone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.file-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.file-upload-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.file-upload-container label {
+  color: #555;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.file-upload-container .selected-file {
+  font-size: 14px;
+  color: #28a745;
+}
+
+.browse-btn {
+  display: none;
+}
+
+.file-wrapper:hover .react-dropzone {
+  background-color: #f0f8ff;
+}
+
+.modal-dialog-centered {
+  min-height: 100% !important;
+}
+
+.custom-modal .modal-dialog {
+  max-width: 900px !important;
+}
+
+.confirm-modal .modal-dialog {
+  max-width: 500px !important;
+  height: auto;
+}
+
+.confirm-container {
+  height: 100%;
+  background: $light;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  min-height: 600px;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.confirm-modal-ttile {
+  font-weight: 600;
+}
+
+.confirm-modal-div {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+
+  button {
+    width: 180px;
+    height: 50px;
+    font-size: 18px;
+  }
+}
+
+.modal-react-select {
+  width: 100%;
+  min-width: 180px;
+  max-width: 250px;
+  margin-bottom: 5px;
+}
+
+.modal-react-full-select {
+  width: 100%;
+  min-width: 180px;
+  max-width: 250px;
+  margin-bottom: 5px;
+}
+
+.upload-div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.import-div {
+  padding-inline: 20px;
+  display: flex;
+  margin-top: 30px;
+}
+
+.dropzone-div {
+  margin-top: 30px;
+}
+
+.import-column-div {
+  max-height: 460px;
+  height: 460px;
+  margin-left: 5px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-inline: 10px;
+
+  .row-div {
+    margin-left: 2px;
+
+    .col-div {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.otp-container {
+  width: 70%;
+  margin: 0 auto;
+  // border: 1px solid $gray-400;
+  padding: 20px;
+  margin-top: 24px;
+
+  .input-box {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    margin-right: 6px;
+  }
+}
+
+.otp-info {
+  margin-top: 20px;
+  text-align: center;
+
+  .otp-error {
+    color: red;
+  }
+}
+
+.otp-instruction {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-medium;
+  margin-bottom: 20px;
+}
+
+.checkbox-group {
+  height: 380px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-left: 5px;
+
+  input {
+    cursor: pointer;
+  }
+}
+
+.form-check,
+.export-modal-field {
+  border-radius: 5px;
+  margin: 2px;
+  padding: 2px 2px 2px 32px;
+}
+
+.confirm-container {
+  height: 100px;
+  margin-top: 10px;
+}
+
+.confirm-modal-div {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.export-import-btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.upload-files {
+  padding-left: 25px;
+  padding-top: 5px;
+
+  .upload-files-title {
+    color: black;
+  }
+}
+
+.err-msg {
+  height: 20px;
+  color: red;
+  padding-left: 25px;
+  line-height: 20px;
+}
+
+.import-select-all {
+  margin-left: 13px;
+  height: 33px;
+}
+
+.remove-file-btn {
+  background: none;
+  border: none;
+  color: #f53232;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.custom-modal-header {
+  padding: 10px 20px !important;
+  border-bottom: 0 !important;
+}
+
+.custom-modal-body {
+  padding: 2px 0px !important;
+  min-height: 560px;
+}
+
+.custom-modal-footer {
+  padding: 8px 12px !important;
+  border-top: 0 !important;
+}
+
+.step3-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .step3-div {
+    width: 400px;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .step3-state {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+    }
+  }
+}
+
+.center-btn {
+  margin: 0 auto !important;
+}
+
+.export-otp-wrapper {
+  padding: 10px 20px !important;
+}
+
+.reset-modal {
+  min-width: 500px;
+}
+
+.bulk-upload-modal {
+  .custom-modal-body {
+    height: 400px;
+  }
+
+  .bulk-upload-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 20px;
+
+    button {
+      height: 57px;
+      width: 149px;
+      font-size: 22px;
+      font-weight: bold;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+      &:active {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+.col-container {
+  min-width: 270px;
+}
+
+.loading-container {
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.filter-modal {
+  .filter-body {
+    overflow-y: auto;
+    height: 100%;
+    max-height: 100%;
+    padding-right: 12px;
+  }
+  .modal-dialog {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+    min-width: calc(100% - 200px);
+    max-width: 100%;
+    width: calc(100% - 250px);
+    @media (width < 924px) {
+      min-width: 100%;
+      max-width: 100%;
+      width: 100%;
+    }
+    .modal-content {
+      height: 100%;
+      .modal-body {
+        overflow: hidden;
+        .filters-container {
+          max-height: 100%;
+          overflow-y: auto;
+          padding-bottom: 50px;
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+.filter-accordian-container {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  .header {
+    width: 100%;
+    background-color: #dee2e6;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,187 @@
+.detail-page {
+  border-top: none;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background: white;
+  .header {
+    background-color: $charcoal;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px 5px 0px 0px;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    .header-item {
+      display: flex;
+      gap: 0.5rem;
+      flex-direction: column;
+      min-width: 300px;
+      flex: 1;
+      word-break: break-word;
+      &:last-child {
+        justify-items: end;
+      }
+      .header-detail {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .icon {
+        min-width: 20px;
+        height: 20px;
+        opacity: 0.8;
+      }
+
+      span {
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid $gray-400;
+    margin: 0px 15px;
+
+    .tabs-button {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #6b7280;
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.2s;
+      border-radius: 5px 5px 0px 0px;
+      border: 1px solid $gray-300;
+      &:hover {
+        color: $charcoal;
+        background-color: $gray-300;
+      }
+
+      &.active {
+        color: $charcoal;
+        background-color: $inactive-color;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -1px;
+          left: 0;
+          right: 0;
+          height: 3px;
+          background-color: $charcoal;
+        }
+      }
+    }
+  }
+
+  .content {
+    background-color: white;
+    padding: 15px;
+    // max-height: 400px;
+    height: 100%;
+    overflow-y: auto;
+
+    margin: 0px 15px 15px;
+    border-radius: 0px 0px 5px 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-top: none;
+    border: 1px solid $gray-300;
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+
+      .info-item {
+        .label {
+          font-size: 0.875rem;
+          color: #6b7280;
+          margin-bottom: 0.25rem;
+        }
+
+        .value {
+          font-size: 1rem;
+          color: $charcoal;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .history-list,
+  .service-records {
+    .filter-div {
+      margin-bottom: 15px;
+    }
+    .record {
+      padding: 1rem;
+      border-bottom: 1px solid #e5e7eb;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .date {
+        color: #6b7280;
+        font-size: 0.875rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .description {
+        color: $charcoal;
+      }
+    }
+  }
+}
+.back-to-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0px;
+  .title-heading {
+    font-size: 1.5rem;
+    font-weight: $font-weight-medium;
+  }
+}
+.back-arrow {
+  background-color: $gray-300;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 99px;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .detail-page .header {
+    padding: 0.5rem;
+  }
+
+  .detail-page .tabs-button {
+    padding: 0.5rem 1rem;
+  }
+
+  .detail-page .content {
+    padding: 1rem;
+  }
+
+  .detail-page .info-grid {
+    gap: 1rem;
+  }
+  .hide-mb {
+    display: none;
+  }
+}
