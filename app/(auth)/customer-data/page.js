@@ -1,7 +1,8 @@
-import React from "react";
+import { redirect } from 'next/navigation';
 
 const page = () => {
-  return <div>Hello from Home Page</div>;
-};
+  return redirect('customer-data/detail-page');
+  
+}
 
-export default page;
+export default page

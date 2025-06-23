@@ -29,7 +29,7 @@ export const DashboardMenu = [
     subMenu: [
       {
         name: "Customer Detail",
-        route: "/customer-data/detail-page/1",
+        route: "/customer-data/detail-page",
         icon: <TiExportOutline />,
       },
       {
