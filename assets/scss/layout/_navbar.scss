@@ -27,7 +27,6 @@
   margin: 0 !important;
   line-height: 50.5px;
   color: $primary;
-  user-select: none;
   .app-version {
     font-size: 12px;
     background: black;
@@ -51,7 +50,7 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  .userName{
+  .userName {
     font-size: $font-size-sm;
   }
 }
@@ -79,8 +78,7 @@
 .profileMenuDiv {
   position: absolute;
   width: 200px;
-  height: 100%;
-  max-height: 39px;
+  height: fit-content;
   top: 57px;
   right: 24px;
   background-color: white;
@@ -148,7 +146,7 @@
   background-color: white;
   color: black;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-   transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
   z-index: 999;
 
   &.open {
@@ -159,7 +157,7 @@
   &.close {
     left: 0;
     width: 60px;
-    overflow: hidden;
+    // overflow: hidden;
   }
 
   a.active {
@@ -201,7 +199,8 @@
     color: gray;
   }
 
-  a {
+  a,
+  .div-link {
     text-decoration: none;
     color: gray;
     display: flex;
@@ -250,6 +249,110 @@
       }
     }
   }
+
+  .menu-item {
+    position: relative;
+
+    .icon-with-tooltip {
+      position: relative;
+
+      .submenu-tooltip {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 45px;
+        min-width: 160px;
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        z-index: 1000;
+        padding: 8px 0;
+
+        a.submenu-link {
+          display: block;
+          padding: 8px 16px;
+          color: black;
+          text-decoration: none;
+          white-space: nowrap;
+          font-size: 14px;
+
+          &:hover {
+            background: $inactive-color;
+          }
+        }
+      }
+    }
+
+    .icon-with-tooltip:hover .submenu-tooltip {
+      display: block;
+    }
+  }
+  .submenu-inline {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding-left: 35px;
+
+    a.submenu-link-inline {
+      display: block;
+      padding: 6px 0;
+      font-size: 14px;
+      color: $dark;
+      text-decoration: none;
+
+      &:hover {
+        background-color: $inactive-color;
+      }
+    }
+
+    &.show {
+      max-height: 300px;
+    }
+  }
+
+  .icon-with-tooltip:hover .submenu-tooltip,
+  .submenu-tooltip:hover {
+    display: block;
+  }
+  a.active-parent {
+    background-color: $primary;
+    color: white;
+    border-radius: 5px 5px 0 0;
+
+    .nav-icons {
+      color: white;
+    }
+  }
+
+  .submenu-inline {
+    padding-left: 0;
+    transition: max-height 0.3s ease;
+
+    &.show {
+      max-height: 300px;
+      border-top: 0;
+      // background: #f0f0f0; // light grey box bg
+      border-radius: 0 0 5px 5px;
+    }
+
+    a.submenu-link-inline {
+      padding: 6px 10px;
+      display: block;
+      font-size: 14px;
+      color: $dark;
+
+      &:hover {
+        background-color: $inactive-color;
+      }
+
+      &.active-submenu {
+        background-color: #ccc;  
+        font-weight: bold;
+        border-radius: 4px;
+      }
+    }
+  }
 }
 
 .page-container {
@@ -272,7 +375,7 @@
   padding: 10px;
   transition: margin-left 0.3s ease-in-out;
   background-color: ghostwhite;
-  height: 100vh;
+  // height: 100vh;
 
   &.shifted {
     margin-left: 200px;
@@ -328,4 +431,68 @@
 
 .input-container {
   position: relative;
+}
+
+.haveSubmenu {
+  cursor: pointer;
+}
+
+.active-parent {
+  background-color: $primary;
+  color: white;
+  border-radius: 5px 5px 0 0;
+}
+
+.submenu-inline.show {
+  background-color: #f0f0f0;
+  border-radius: 0 0 5px 5px;
+}
+
+.submenu-link-inline.active-submenu {
+  background-color: #ccc;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.tabs-ref {
+  flex-grow: 1;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.tab-btn {
+  background-color: $secondary-light;
+}
+ 
+ .submenu-inline a.submenu-link-inline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;  
+
+  .nav-icons {
+    color: $primary; 
+  }
+
+  
+
+  &.active-submenu {
+    background-color: #ccc;
+    font-weight: bold;
+    border-radius: 4px;
+    color: $primary;
+
+    .nav-icons {
+      color: $primary;
+    }
+
+    &:hover {
+      color: $primary;
+
+      .nav-icons {
+        color: $primary;
+      }
+    }
+  }
 }

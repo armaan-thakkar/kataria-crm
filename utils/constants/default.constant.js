@@ -83,7 +83,7 @@ export const FORMIK = {
   MAX_1024: { VALUE: 1024, MESSAGE: "Maximun 1024 characters are allowed." },
 };
 
-export const PAGE_SIZE = [50, 100, 200, 500, 1000];
+export const PAGE_SIZE = [10,20,30,40,50];
 
 export const MASTERS_KEY = {
   SERVICE_TYPE: "SERVICE_TYPE",

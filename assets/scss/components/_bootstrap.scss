@@ -1,0 +1,44 @@
+// cards scss
+.custom-card {
+  border-radius: 0px 0px 5px 5px;
+  .custom-card-body {
+    height: calc(100vh - 380px);
+    overflow: auto;
+  }
+}
+
+// tabs scss
+.nav-tabs {
+  .nav-link {
+    border: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+.custom-tabs.nav-tabs {
+  border-bottom: 0px;
+
+  .nav-item {
+    border: 1px solid $secondary;
+    border-bottom: 0 !important;
+    border-radius: 5px 5px 0px 0px;
+    margin-right: 2px;
+    transition: transform 0.3s ease;
+  }
+
+  .nav-link {
+    color: $charcoal;
+
+    &:hover {
+      color: black;
+    }
+
+    &.active {
+      background-color: $charcoal;
+      color: $primary-yellow;
+      border-bottom: 0 !important;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      font-weight: 600;
+    }
+  }
+}

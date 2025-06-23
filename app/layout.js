@@ -1,5 +1,7 @@
 import "react-datepicker/dist/react-datepicker.css";
 import "@/assets/scss/main.scss";
+import { Toaster } from "react-hot-toast";
+import Providers from "@/provider/ReduxProviders";
 
 export const metadata = {
   title: "CRM | Kataria",
@@ -10,7 +12,21 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <main>{children}</main>
+        <Toaster
+          position="top-right"
+          toastOptions={{
+            duration: 4000,
+            style: {
+              fontSize: 18,
+              padding: 12,
+              minWidth: "200px",
+            },
+          }}
+          reverseOrder={false}
+        />
+        <Providers>
+          <main>{children}</main>
+        </Providers>
       </body>
     </html>
   );

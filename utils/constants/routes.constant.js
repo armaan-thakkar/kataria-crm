@@ -1,11 +1,8 @@
 import { FiUsers } from "react-icons/fi";
 import { AiOutlineFileSearch } from "react-icons/ai";
-import {
-  // IoGridOutline,
-  IoServerOutline,
-} from "react-icons/io5";
-import { MdDriveFolderUpload } from "react-icons/md";
 import { TiExportOutline } from "react-icons/ti";
+import { CgEditMask } from "react-icons/cg";
+import { GiMeditation } from "react-icons/gi";
 
 export const PAGE_PARAMS = {
   CUSTOMER_ID: ":id",
@@ -25,32 +22,100 @@ export const PAGE_ROUTES = {
 };
 
 export const DashboardMenu = [
- 
   {
-    name: "Customer Data",
+    name: "Customer Detail",
     route: PAGE_ROUTES.CUSTOMER_DATA,
-    icon: <IoServerOutline />,
+    icon: <CgEditMask />,
+    subMenu: [
+      {
+        name: "Customer Detail",
+        route: "/customer-data/detail-page/1",
+        icon: <TiExportOutline />,
+      },
+      {
+        name: "Customer Age",
+        route: "/customer-data/history",
+        icon: <TiExportOutline />,
+      },
+    ],
   },
   {
-    name: "Import History",
+    name: "Search Customer",
     route: PAGE_ROUTES.IMPORT_HISTORY,
-    icon: <MdDriveFolderUpload />,
+    icon: <GiMeditation />,
   },
   {
-    name: "Export History",
+    name: "Reports",
     route: PAGE_ROUTES.EXPORT_HISTORY,
     icon: <TiExportOutline />,
+    subMenu: [
+      {
+        name: "Customer Detail",
+        route: "/export-history/1",
+        icon: <TiExportOutline />,
+      },
+      {
+        name: "Customer Age",
+        route: "/export-history/age",
+      },
+    ],
   },
   {
-    name: "User Management",
+    name: "Call Log",
     route: PAGE_ROUTES.USERS,
     icon: <FiUsers />,
   },
   {
-    name: "Bulk Search",
+    name: "Add Complaint",
     route: PAGE_ROUTES.DATA_CHECKER,
     icon: <AiOutlineFileSearch />,
   },
 ];
 
- 
+export const dummyCardData = {
+  vehicle_info: {
+    "Model and Variant": "Maruti Suzuki Baleno Zeta",
+    "Vin Number": "MA3EWB12S00234567",
+    "Registration Number": "MH12AB1234",
+    "Engine Number": "K12N1234567",
+    "Chassis Number": "MBHDE123456789012",
+    Mileage: "12,345 km",
+    "Sale Date": "2023-08-15",
+    Location: "Pune",
+    Dealer: "Wonder Cars Pvt Ltd",
+    "Work Station Name": "Maruti Service Center",
+    "Work Station Code": "MSC789",
+  },
+
+  next_due: {
+    "Next Service Date": "2025-07-01",
+    "Due in (days)": "12",
+    "Service Type": "Free",
+  },
+
+  last_status: {
+    "Last Serviced On": "2025-05-30",
+    "Odometer Reading": "12,000 km",
+    "Service Feedback": "Excellent",
+  },
+
+  service_history: {
+    "Total Services": "3",
+    "Last Workshop": "Wonder Cars, Pune",
+    "Invoice Amount": "₹4,500",
+  },
+
+  insurance: {
+    "Policy Number": "INS2025XYZ456",
+    Provider: "ICICI Lombard",
+    "Valid Till": "2026-08-15",
+  },
+
+  owner_details: {
+    "Owner Name": "Rahul Sharma",
+    "Mobile Number": "+91 9876543210",
+    Address: "Bhandarkar Road, Pune",
+    "Email ID": "rahul.sharma@email.com",
+  },
+};
+

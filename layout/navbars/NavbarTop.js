@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
+import { FaUser } from "react-icons/fa";
 import {
   IoPersonOutline,
   IoMenuOutline,
@@ -53,7 +54,7 @@ const NavbarTop = ({ onSidebarToggle }) => {
               className={`profileIcon ${isProfileMenuOpen ? "active" : ""}`}
               onClick={toggleProfileMenu}
             >
-              <IoPersonOutline size={18} color="black" />
+              <FaUser size={18} color="black" />
             </div>
           </div>
 
