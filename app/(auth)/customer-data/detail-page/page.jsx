@@ -13,6 +13,8 @@ import DynamicForm from "@/components/DynamicForm";
 import { MdAlternateEmail, MdDoDisturbAlt } from "react-icons/md";
 import CustomTable from "@/components/custom-table/CustomTable";
 import CustomPagination from "@/components/custom-pagination/CustomPagination";
+import PageLoader from "@/components/loader/PageLoader";
+import ComponentLoader from "@/components/loader/ComponentLoader";
 
 const leftTabs = [
   { key: "vehicle_info", title: "Vehicle Info" },
@@ -515,8 +517,7 @@ export default function DynamicTabView() {
     totalPages: Math.ceil(subTabData.length / pageSize),
     pageSize,
   };
-
-  return (
+   return (
     <Container fluid className="px-6 mt-5 pt-3">
       <div className="detail-page sticky-header">
         <div className="header">

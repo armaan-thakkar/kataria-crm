@@ -118,7 +118,7 @@ const dummyForms = {
         </Col>
       </Row>
       <div className="mt-3 d-flex justify-content-end gap-2">
-        <Button variant="secondary">Reset</Button>
+        <Button variant="secondary">Reset Form</Button>
         <Button variant="primary">Submit</Button>
       </div>
     </Form>

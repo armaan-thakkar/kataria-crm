@@ -145,3 +145,19 @@
     transform: rotate(360deg);
   }
 }
+.componentLoaderWrapper {
+  position: relative; /* relative to the component container */
+}
+
+.componentLoaderOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;  /* only covers the component */
+  height: 98.5vh;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10; /* ensure it's above other content inside */
+}
+ 
