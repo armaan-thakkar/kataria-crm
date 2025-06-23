@@ -33,7 +33,7 @@ export const DashboardMenu = [
         icon: <TiExportOutline />,
       },
       {
-        name: "Customer Age",
+        name: "Customer History",
         route: "/customer-data/history",
         icon: <TiExportOutline />,
       },
@@ -45,17 +45,17 @@ export const DashboardMenu = [
     icon: <GiMeditation />,
   },
   {
-    name: "Reports",
+    name: "Export",
     route: PAGE_ROUTES.EXPORT_HISTORY,
     icon: <TiExportOutline />,
     subMenu: [
       {
-        name: "Customer Detail",
+        name: "Export Detail",
         route: "/export-history/1",
         icon: <TiExportOutline />,
       },
       {
-        name: "Customer Age",
+        name: "Export History",
         route: "/export-history/age",
       },
     ],
