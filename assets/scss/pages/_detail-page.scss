@@ -44,7 +44,7 @@
         min-width: 20px;
         height: 20px;
         opacity: 0.8;
-        color: $primary-yellow;
+        color: $secondary-light;
       }
 
       span {
@@ -65,8 +65,8 @@
       margin-top: 0;
       margin-bottom: 10px;
       box-shadow:
-        #fdbe10 0px 5px 0px,
-        #fdbe10 0px 7px 6px;
+        #b4b2aa 0px 4px 0px,
+        #a8a59c 0px 0px 6px;
       display: block;
       background: $light;
       color: $primary;
@@ -215,7 +215,7 @@
   max-height: calc(100vh - 550px);
 }
 
-.interaction-history{
+.interaction-history {
   margin-top: 15px;
   background-color: $primary;
   color: $primary-yellow;

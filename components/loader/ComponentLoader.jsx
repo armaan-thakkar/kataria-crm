@@ -1,8 +1,8 @@
 import React from "react";
 
-const ComponentLoader = ({ loading, children }) => {
+const ComponentLoader = () => {
   return (
-    <div className="componentLoaderWrapper h-95vh d-flex align-items-center justify-content-center gap-3">
+    <div className="componentLoaderWrapper h-95vh">
       <div className="componentLoaderOverlay">
         <div className="page-loader" />
       </div>

@@ -3,6 +3,8 @@ import { AiOutlineFileSearch } from "react-icons/ai";
 import { TiExportOutline } from "react-icons/ti";
 import { CgEditMask } from "react-icons/cg";
 import { GiMeditation } from "react-icons/gi";
+import { BiSolidUserDetail } from "react-icons/bi";
+import { TbUsersPlus } from "react-icons/tb";
 
 export const PAGE_PARAMS = {
   CUSTOMER_ID: ":id",
@@ -25,7 +27,7 @@ export const DashboardMenu = [
   {
     name: "Customer Detail",
     route: PAGE_ROUTES.CUSTOMER_DATA,
-    icon: <CgEditMask />,
+    icon: <TbUsersPlus />,
     subMenu: [
       {
         name: "Customer Detail",
@@ -35,7 +37,7 @@ export const DashboardMenu = [
       {
         name: "Customer History",
         route: "/customer-data/history",
-        icon: <TiExportOutline />,
+        icon: <BiSolidUserDetail />,
       },
     ],
   },

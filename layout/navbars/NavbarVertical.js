@@ -94,8 +94,8 @@ export default function NavbarVertical({ isOpen }) {
                         pathname.startsWith(sub.route) ? "active-submenu" : ""
                       }`}
                     >
-                      <span className={getIcon(route)}>{icon}</span>
-                      <span>{sub.name}</span>
+                      <span className={`${getIcon(sub.route)}`}>{sub.icon}</span>
+                      <span className="ms-2">{sub.name}</span>
                     </Link>
                   ))}
                 </div>
