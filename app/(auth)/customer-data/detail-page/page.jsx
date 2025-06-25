@@ -545,7 +545,7 @@ export default function DynamicTabView() {
           <div className="header-item">
             <div className="header-detail">
               <IoLocationSharp className="icon" size={22} />
-              <span>{data.address}</span>
+              <span style={{width:"250px"}}>{data.address}</span>
             </div>
           </div>
 
@@ -592,31 +592,30 @@ export default function DynamicTabView() {
               <span className="font-charcoal">
                 Next Service Type (FR/ PMS):
               </span>
-              <span className="font-primary font-bold">FR2</span>
+              <span className="font-primary font-bold">PMS20</span>
             </div>
             <div className="header-detail">
-              <span className="font-charcoal">NSD predicted by Mileage:</span>
-              <span className="font-primary font-bold">12000 km</span>
+              <span className="font-charcoal">
+                Workshop:
+              </span>
+              <span className="font-primary font-bold">AHM Maninagar</span>
             </div>
+           
           </div>
           <div className="header-item">
             <div className="header-detail">
               <span className="font-charcoal">Avg. Km per day:</span>
-              <span className="font-primary font-bold">160 L</span>
+              <span className="font-primary font-bold">43930 Km</span>
             </div>
             <div className="header-detail">
               <span className="font-charcoal">Predicted Mileage:</span>
-              <span className="font-primary font-bold">250 L</span>
+              <span className="font-primary font-bold">500 Km</span>
             </div>
           </div>
           <div className="header-item">
-            <div className="header-detail">
-              <span className="font-charcoal">
-                Current Mileage (textbox) and Date:
-              </span>
-              <span className="font-primary font-bold">
-                AHM_A_60 || 16-06-2025 || AHM Maninagar
-              </span>
+           <div className="header-detail">
+              <span className="font-charcoal">Current Mileage and Date:</span>
+              <input type="text" placeholder="Enter Km" className="w-50"/>
             </div>
           </div>
         </div>

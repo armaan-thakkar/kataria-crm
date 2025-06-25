@@ -9,9 +9,10 @@ import { IoMdCall } from "react-icons/io";
 import { IoLocationSharp } from "react-icons/io5";
 import { VscCallOutgoing } from "react-icons/vsc";
 import { BiSolidEdit } from "react-icons/bi";
-import { MdAlternateEmail, MdDoDisturbAlt } from "react-icons/md";
+import { MdAlternateEmail, MdCallEnd, MdDoDisturbAlt } from "react-icons/md";
 import CustomTable from "@/components/custom-table/CustomTable";
 import CustomPagination from "@/components/custom-pagination/CustomPagination";
+import SimpleTimer from "../Timer";
 
 const leftTabs = [
   { key: "vehicle_info", title: "Vehicle Info" },
@@ -76,7 +77,12 @@ const dummyCardData = {
 const dummyForms = {
   disposition_form: (
     <Form>
-      <Form.Check type="radio" label="Book My Service" name="disposition" checked/>
+      <Form.Check
+        type="radio"
+        label="Book My Service"
+        name="disposition"
+        checked
+      />
       <Form.Check
         type="radio"
         label="Service Not Required"
@@ -521,11 +527,11 @@ export default function DynamicTabView() {
           <div className="header-item">
             <div className="header-detail">
               <FaUserAlt className="icon" size={22} />
-              <span>{data.name}</span>
+              <span className="white-bg-text">{data.name}</span>
             </div>
             <div className="header-detail">
               <MdAlternateEmail className="icon" size={22} />
-              <span>{data.email}</span>
+              <span className="white-bg-text">{data.email}</span>
             </div>
             <div className="header-detail">
               <IoMdCall className="icon" size={22} />
@@ -542,33 +548,44 @@ export default function DynamicTabView() {
           <div className="header-item">
             <div className="header-detail">
               <IoLocationSharp className="icon" size={22} />
-              <span>{data.address}</span>
+              <span style={{width:"250px"}}>{data.address}</span>
             </div>
           </div>
 
           <div className="header-item">
             <div className="header-detail">
               <FaBuilding className="icon" size={22} />
-              <span>{data.registrationNumber}</span>
+              <span className="white-bg-text">{data.registrationNumber}</span>
             </div>
             <div className="header-detail">
               <FaCar className="icon" size={22} />
-              <span>{data.vehicle.model}</span>
+              <span className="white-bg-text">{data.vehicle.model}</span>
             </div>
             <div className="header-detail">
               <MdDoDisturbAlt className="icon" size={22} />
               {data.dnd && <span className="dnd-detail">DND</span>}
             </div>
           </div>
-
-          <div className="header-icon">
-            <BiSolidEdit size={30} />
-          </div>
-          <div className="header-icon">
-            <VscCallOutgoing size={30} />
-          </div>
-          <div className="header-icon">
-            <FaCommentSms size={30} />
+          <div className="d-flex flex-column">
+            <div className="d-flex gap-2">
+              <div className="header-icon">
+                <BiSolidEdit size={30} />
+              </div>
+              <div className="header-icon">
+                <VscCallOutgoing size={30} />
+              </div>
+              <div className="header-icon">
+                <FaCommentSms size={30} />
+              </div>
+            </div>
+            <div className="end-call">
+              <div>
+                <MdCallEnd size={22} />
+              </div>
+              <div>
+                <SimpleTimer />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -577,11 +594,11 @@ export default function DynamicTabView() {
           <div className="header-item">
             <div className="header-detail">
               <span className="font-charcoal">NSD predicted by Date:</span>
-              <span className="font-primary font-bold">20-7-2025</span>
+              <span className="black-bg-text">20-7-2025</span>
             </div>
             <div className="header-detail">
               <span className="font-charcoal">NSD predicted by Mileage :</span>
-              <span className="font-primary font-bold">12000 km</span>
+              <span className="black-bg-text">12000 km</span>
             </div>
           </div>
           <div className="header-item">
@@ -589,42 +606,39 @@ export default function DynamicTabView() {
               <span className="font-charcoal">
                 Next Service Type (FR/ PMS):
               </span>
-              <span className="font-primary font-bold">FR2</span>
+              <span className="black-bg-text">PMS20</span>
             </div>
             <div className="header-detail">
-              <span className="font-charcoal">NSD predicted by Mileage:</span>
-              <span className="font-primary font-bold">12000 km</span>
+              <span className="font-charcoal">Workshop:</span>
+              <span className="black-bg-text">AHM Maninagar</span>
             </div>
           </div>
           <div className="header-item">
             <div className="header-detail">
               <span className="font-charcoal">Avg. Km per day:</span>
-              <span className="font-primary font-bold">160 L</span>
+              <span className="black-bg-text">43930 Km</span>
             </div>
             <div className="header-detail">
               <span className="font-charcoal">Predicted Mileage:</span>
-              <span className="font-primary font-bold">250 L</span>
+              <span className="black-bg-text">500 Km</span>
             </div>
           </div>
           <div className="header-item">
             <div className="header-detail">
-              <span className="font-charcoal">
-                Current Mileage (textbox) and Date:
-              </span>
-              <span className="font-primary font-bold">
-                AHM_A_60 || 16-06-2025 || AHM Maninagar
-              </span>
+              <span className="font-charcoal">Current Mileage and Date:</span>
+              <input type="text" placeholder="Enter Km" className="w-50" />
             </div>
           </div>
         </div>
       </div>
-      <Row className="mt-2">
+      <Row>
         <Col md={7}>
           <ScrollableTabs
             tabs={leftTabs}
             activeKey={activeLeft}
             onSelect={setActiveLeft}
             maxVisibleTabs={8}
+            className={"left-tab"}
           />
           <Card className="custom-card">
             <Card.Body className="custom-card-body">
@@ -682,6 +696,7 @@ export default function DynamicTabView() {
             activeKey={activeRight}
             onSelect={setActiveRight}
             maxVisibleTabs={7}
+            className={"left-tab"}
           />
           <Card className="custom-card">
             <Card.Body className="custom-card-body">
@@ -692,9 +707,7 @@ export default function DynamicTabView() {
       </Row>
       <Row>
         <Col md={12}>
-        <div className="interaction-history">
-          Interaction History
-        </div>
+          <div className="interaction-history">Interaction History</div>
           <CustomTable
             columns={columnsMap[activeInteractionSubTab] || columnsMap.default}
             data={paginatedData}

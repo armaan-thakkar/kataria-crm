@@ -9,6 +9,7 @@ export default function ScrollableTabs({
   activeKey,
   onSelect,
   maxVisibleTabs,
+  className="",
   showScroll = true,
 }) {
   const tabsRef = useRef(null);
@@ -44,7 +45,7 @@ export default function ScrollableTabs({
         <Tabs
           activeKey={activeKey}
           onSelect={onSelect}
-          className="mb-0 custom-tabs"
+          className={`mb-0 custom-tabs ${className}`}
           style={{
             display: "inline-flex",
             flexWrap: "nowrap",
