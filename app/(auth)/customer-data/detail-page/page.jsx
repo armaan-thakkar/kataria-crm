@@ -518,7 +518,7 @@ export default function DynamicTabView() {
     pageSize,
   };
    return (
-    <Container fluid className="px-6 mt-5 pt-3">
+    <Container fluid className="px-6 pt-3">
       <div className="detail-page sticky-header">
         <div className="header">
           <div className="header-item">

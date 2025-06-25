@@ -59,7 +59,7 @@ const dummyCardData = {
     "Bill Amount": "₹8,750",
     "Last ServiceType": "Periodic Maintenance",
     "Last ServiceLocation": "AutoCare Center, Mumbai",
-    Mileage: "16.5 km/l",
+    Mileage: "16.5 km",
     "Service AdvisorName": "Rahul Mehta",
     "Days Between Visit": "180",
   },
@@ -236,8 +236,8 @@ const columnsMap = {
     { key: "details", title: "Details", width: "200px" },
     { key: "creRemarks", title: "CRE Remarks", width: "150px" },
     { key: "feedback", title: "Feedback", width: "100px" },
-    { key: "callMadeType", title: "CallMade Type", width: "130px" },
-    { key: "isCallInitiated", title: "IsCallinitiated?", width: "130px" },
+    { key: "callMadeType", title: "Callmade Type", width: "130px" },
+    { key: "isCallInitiated", title: "Is Callinitiated?", width: "130px" },
   ],
   default: [
     { key: "date", title: "Date", width: "120px" },
@@ -521,7 +521,7 @@ export default function DynamicTabView() {
   };
 
   return (
-    <Container fluid className="px-6 mt-5 pt-3">
+    <Container fluid className="px-6 pt-3">
       <div className="detail-page sticky-header">
         <div className="header">
           <div className="header-item">

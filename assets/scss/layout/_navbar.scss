@@ -372,10 +372,11 @@
 }
 
 #main-content {
-  padding: 10px;
+  padding: 51px 0px;
   transition: margin-left 0.3s ease-in-out;
   background-color: ghostwhite;
-  // height: 100vh;
+  min-height: 100vh;
+  max-height: 100%;
 
   &.shifted {
     margin-left: 200px;
